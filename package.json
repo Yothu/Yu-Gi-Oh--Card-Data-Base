@@ -20,6 +20,10 @@
   },
   "homepage": "https://github.com/Yothu/api-capstone-project#readme",
   "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.4.6",
     "css-loader": "^6.5.1",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.7",

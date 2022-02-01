@@ -39,3 +39,12 @@
 .hide {
   display: none !important;
 }
+
+h5 {
+  max-width: 70%;
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+}

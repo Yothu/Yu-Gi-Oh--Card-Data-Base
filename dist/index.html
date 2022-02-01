@@ -5,7 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <title>Document</title>
+  <script src="https://kit.fontawesome.com/1d827eb1c8.js" crossorigin="anonymous"></script>
+  <title>Monster Cards</title>
 <script defer src="index.bundle.js"></script><script defer src="loadImage.bundle.js"></script><script defer src="displayComment.bundle.js"></script><script defer src="runtime.bundle.js"></script><script defer src="shared.bundle.js"></script></head>
 <body>
   <div class="whole-page">
@@ -13,40 +14,13 @@
       <nav id="header-inner-container" class="d-flex justify-content-between align-items-center">
         <div class="header-logo-container"></div>
         <ul class="bg-warning list-unstyled d-flex p-3 m-0">
-          <li class="px-3"><a href="#" class="text-decoration-none fw-bolder font-20px text-dark">Trap Cards</a></li>
-          <li class="px-3"><a href="#" class="text-decoration-none fw-bolder font-20px text-dark">Monster Cards</a></li>
+          <li class="px-3" id="monster-nav"><a href="#" class="text-decoration-none fw-bolder font-20px text-dark">Monster Cards</a></li>
+          <li class="px-3" id="trap-nav"><a href="#" class="text-decoration-none fw-bolder font-20px text-dark id">Trap Cards</a></li>
+          <li class="px-3" id="spell-nav"><a href="#" class="text-decoration-none fw-bolder font-20px text-dark">Spell Cards</a></li>
         </ul>
       </nav>
     </header>
-
-    <div id="asd" class=""></div>
-    <!-- <div class="pop-up-background">
-      <div class="pop-up-container m-3 border border-3 border-dark bg-white">
-        <div class="d-flex flex-column p-3 align-items-center">
-          <img class="cross-pop p-1 align-self-end border border-2 border-dark  " src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/344/external-close-cross-symbol-for-discontinued-and-invalid-basic-bold-tal-revivo.png" alt="">
-          <img class="y-card" src="https://qph.fs.quoracdn.net/main-qimg-98732885e1731509a4ce78d853dd0173-pjlq" alt="">
-        </div>
-        <hr class="border border-3 border-dark">
-        <div>
-          <div class="name-container d-flex">
-            <p>Name:</p>
-            <h3>Blue-Eyes White Dragon</h3>
-          </div>
-          <div class="type-container d-flex">
-            <p>Type:</p>
-            <h4>Monster Card</h4>
-          </div>
-          <div class="desription-container d-flex">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe neque tempora ullam itaque sit iusto, eligendi alias ducimus excepturi officia obcaecati? Dolore cupiditate fugiat ut expedita architecto dicta animi laudantium.</p>
-          </div>
-          <div class="race-container d-flex">
-            <p>Race:</p>
-            <p>Dragon</p>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
+    <div id="list-container" class="container align-content-center p-3"></div>
     <footer class="border border-2 border-dark">
       <div class="p-3">
         <p class="font-20px m-0">Created by David Vergaray and Eduardo Sancho under MIT license.</p>

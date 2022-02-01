@@ -24,7 +24,6 @@ const displayList = (array) => {
     </div>
     </div>
     <a href="#" class="btn btn-primary">Comments</a>
-    <a href="#" class="btn btn-primary">Reservations</a>
     </div>
     `;
       const cardImageContainer = card.querySelector('.card-img-top')

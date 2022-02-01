@@ -16,10 +16,12 @@
 .y-card {
   min-width: 250px;
   width: 50vw;
+  max-width: 400px;
 }
 
 .cross-pop {
   height: 3rem;
+  border-radius: 50%;
 }
 
 .pop-up-container {

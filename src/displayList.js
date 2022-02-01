@@ -4,14 +4,13 @@ const displayList = (array) => {
   const listContainer = document.getElementById('list-container');
   listContainer.innerHTML = '';
 
-  for (let j = 0; j < 10; j += 3) {
+  for (let j = 0; j < 15; j += 4) {
     const row = document.createElement('div');
     row.classList.add('row');
 
-    for (let i = 0; i < 3; i += 1) {
+    for (let i = 0; i < 4; i += 1) {
       const card = document.createElement('div');
-      //Watch out for this
-      card.classList.add('col-sm-6', 'col-12', 'col-md-4', 'card', 'm-2', 'p-2');
+      card.classList.add('col-12', 'col-sm-6', 'col-lg-3', 'card', 'pt-2');
       card.setAttribute('id', `card-${array[i + j].id}`);
       card.innerHTML = `
         <div class="card-img-top w-75 align-self-center"></div>

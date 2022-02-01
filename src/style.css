@@ -2,6 +2,44 @@
   height: 5rem;
 }
 
+.pop-up-background {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  overflow: auto;
+  background-image: url('https://wallpapercave.com/wp/wp2311074.png');
+}
+
+.pop-up-container {
+  height: 100%;
+  border-radius: 20px;
+  flex-basis: 800px;
+  background-color: #733526;
+  border-color: #b5895a !important;
+  overflow-y: auto;
+  min-height: calc(100vh - 2rem);
+}
+
+.y-card {
+  min-width: 250px;
+  width: 50vw;
+  max-width: 400px;
+}
+
+.cross-pop {
+  height: 3rem;
+  border-radius: 50%;
+  filter: invert(100%);
+}
+
+.hide {
+  display: none !important;
+}
+
 h5 {
   max-width: 70%;
   font-size: 1rem;

@@ -12,6 +12,10 @@ module.exports = {
       import: './src/load-image-module.js',
       dependOn: 'shared',
     },
+    displayComment: {
+      import: './src/displayCommentPopup.js',
+      dependOn: 'shared',
+    },
     shared: 'lodash',
   },
   devServer: {

@@ -1,16 +1,40 @@
-/* FONT-FAMILY
+/* FONT-FAMILY  */
+
 @font-face {
-  font-family: cocogoose-pro;
-  src: url("./fonts/cocogoose-pro.otf");
+  font-family: ITC-Stone-Serif-Small-Caps-Bold;
+  src: url('./components/fonts/ITC-Stone-Serif-Small-Caps-Bold.ttf');
 }
 
-.font-coco {
-  font-family: "cocogoose-pro", sans-serif !important;
+@font-face {
+  font-family: ITC-Stone-Serif-It-Italic;
+  src: url('./components/fonts/itc-stone-serif-lt-italic.ttf');
 }
 
-.font-lato {
-  font-family: "Lato", sans-serif !important;
-} */
+@font-face {
+  font-family: Matrix-Regular-Small-Caps;
+  src: url('./components/fonts/MatrixRegularSmallCaps.ttf');
+}
+
+@font-face {
+  font-family: Matrix-Book;
+  src: url('./components/fonts/Matrix-Book.ttf');
+}
+
+.font-itc-stone-serif-small-caps-bold {
+  font-family: ITC-Stone-Serif-Small-Caps-Bold, sans-serif;
+}
+
+.font-itc-stone-serif-it-italic {
+  font-family: ITC-Stone-Serif-It-Italic, sans-serif;
+}
+
+.font-matrix-regular-small-caps {
+  font-family: Matrix-Regular-Small-Caps, sans-serif;
+}
+
+.font-matrix-book {
+  font-family: Matrix-Book, sans-serif;
+}
 
 /* FONT SIZE */
 .font-12px {

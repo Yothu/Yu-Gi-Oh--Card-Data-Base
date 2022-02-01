@@ -3,8 +3,8 @@ import './font-style.css';
 import loadImage from './load-image-module.js';
 import {
   getCardsApiData, monsters, spells, traps,
-} from './getCardsApiData';
-import displayList from './displayList';
+} from './getCardsApiData.js';
+import displayList from './displayList.js';
 
 import logo from './components/images/monster-cards-logo.png';
 

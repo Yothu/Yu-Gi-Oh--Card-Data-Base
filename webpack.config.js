@@ -8,10 +8,10 @@ module.exports = {
       import: './src/index.js',
       dependOn: 'shared',
     },
-    // another: {
-    //   import: './src/another-module.js',
-    //   dependOn: 'shared',
-    // },
+    loadImage: {
+      import: './src/load-image-module.js',
+      dependOn: 'shared',
+    },
     shared: 'lodash',
   },
   devServer: {

@@ -1,4 +1,4 @@
-import loadImage from './load-image-module';
+import loadImage from './load-image-module.js';
 
 const displayList = (array) => {
   const listContainer = document.getElementById('list-container');

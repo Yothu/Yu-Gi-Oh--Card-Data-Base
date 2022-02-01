@@ -2,7 +2,7 @@ import loadImage from './load-image-module.js';
 
 const createPopupOuterContainer = () => {
   const popUpOuterContainer = document.createElement('div');
-  popUpOuterContainer.classList.add('pop-up-background');
+  popUpOuterContainer.classList.add('pop-up-background', 'd-flex', 'justify-content-center');
 
   // DELETE - IMAGE CONTAINER
   const asd = document.getElementById('asd');
@@ -14,7 +14,7 @@ const createPopupOuterContainer = () => {
 
 const createPopupInnerContainer = (popOutCont) => {
   const popUpInnerContainer = document.createElement('div');
-  popUpInnerContainer.classList.add('pop-up-container', 'm-3', 'border', 'border-3', 'border-dark', 'bg-white');
+  popUpInnerContainer.classList.add('pop-up-container', 'm-3', 'border', 'border-3', 'text-align-center');
   popOutCont.appendChild(popUpInnerContainer);
 
   return popUpInnerContainer;
@@ -46,6 +46,7 @@ const createSeparator = (popInnCont) => {
 
 const createCardInfoContainer = (popInnCont) => {
   const cardInfoContainer = document.createElement('div');
+  cardInfoContainer.classList.add('p-3');
   popInnCont.appendChild(cardInfoContainer);
 
   return cardInfoContainer;
@@ -53,7 +54,7 @@ const createCardInfoContainer = (popInnCont) => {
 
 const createPopupNameContainer = (popCardInfoCont) => {
   const popNameCont = document.createElement('div');
-  popNameCont.classList.add('name-container', 'd-flex');
+  popNameCont.classList.add('name-container', 'd-flex', 'align-items-center');
   popCardInfoCont.appendChild(popNameCont);
 
   return popNameCont;
@@ -61,7 +62,7 @@ const createPopupNameContainer = (popCardInfoCont) => {
 
 const createPopupTypeContainer = (popCardInfoCont) => {
   const popTypeCont = document.createElement('div');
-  popTypeCont.classList.add('type-container', 'd-flex');
+  popTypeCont.classList.add('type-container', 'd-flex', 'align-items-center');
   popCardInfoCont.appendChild(popTypeCont);
 
   return popTypeCont;
@@ -77,7 +78,7 @@ const createPopupDescriptionContainer = (popCardInfoCont) => {
 
 const createPopupRaceContainer = (popCardInfoCont) => {
   const popRaceCont = document.createElement('div');
-  popRaceCont.classList.add('race-container', 'd-flex');
+  popRaceCont.classList.add('race-container', 'd-flex', 'align-items-center');
   popCardInfoCont.appendChild(popRaceCont);
 
   return popRaceCont;
@@ -85,42 +86,49 @@ const createPopupRaceContainer = (popCardInfoCont) => {
 
 const createPopupNameLabel = (popNameCont) => {
   const popNameLabel = document.createElement('p');
+  popNameLabel.classList.add('text-white', 'pe-3');
   popNameLabel.innerText = 'Name:';
   popNameCont.appendChild(popNameLabel);
 };
 
 const createPopupCardName = (name, popNameCont) => {
   const popCardName = document.createElement('p');
+  popCardName.classList.add('text-white', 'font-matrix-regular-small-caps', 'font-50px');
   popCardName.innerHTML = `${name}`;
   popNameCont.appendChild(popCardName);
 };
 
 const createPopupTypeLabel = (popTypeCont) => {
   const popTypeLabel = document.createElement('p');
+  popTypeLabel.classList.add('text-white', 'pe-3');
   popTypeLabel.innerText = 'Type:';
   popTypeCont.appendChild(popTypeLabel);
 };
 
 const createPopupCardType = (type, popTypeCont) => {
   const popCardType = document.createElement('p');
+  popCardType.classList.add('text-white', 'font-itc-stone-serif-small-caps-bold', 'font-35px');
   popCardType.innerHTML = `${type}`;
   popTypeCont.appendChild(popCardType);
 };
 
 const createPopupCardDescription = (description, popDescCont) => {
   const popCardDesc = document.createElement('p');
+  popCardDesc.classList.add('text-white', 'font-itc-stone-serif-it-italic', 'font-20px');
   popCardDesc.innerHTML = `${description}`;
   popDescCont.appendChild(popCardDesc);
 };
 
 const createPopupRaceLabel = (popRaceCont) => {
   const popRaceLabel = document.createElement('p');
+  popRaceLabel.classList.add('text-white', 'pe-3');
   popRaceLabel.innerText = 'Race:';
   popRaceCont.appendChild(popRaceLabel);
 };
 
 const createPopupCardRace = (race, popRaceCont) => {
   const popCardRace = document.createElement('p');
+  popCardRace.classList.add('text-white', 'font-matrix-book', 'font-20px');
   popCardRace.innerHTML = `${race}`;
   popRaceCont.appendChild(popCardRace);
 };
@@ -131,7 +139,9 @@ const displayCommentpopup = (name, type, description, race, image) => {
   const popImgCont = createPopupImageContainer(popInnCont);
 
   createPopupCrossIcon(popImgCont);
-  loadImage(image, popImgCont, 'card-image');
+  const cardImage = loadImage(image, popImgCont, 'card-image');
+  cardImage.classList.add('y-card');
+
   createSeparator(popInnCont);
 
   const popCardInfoCont = createCardInfoContainer(popInnCont);
@@ -144,12 +154,12 @@ const displayCommentpopup = (name, type, description, race, image) => {
   createPopupTypeLabel(popTypeCont);
   createPopupCardType(type, popTypeCont);
 
-  const popDescCont = createPopupDescriptionContainer(popCardInfoCont);
-  createPopupCardDescription(description, popDescCont);
-
   const popRaceCont = createPopupRaceContainer(popCardInfoCont);
   createPopupRaceLabel(popRaceCont);
   createPopupCardRace(race, popRaceCont);
+
+  const popDescCont = createPopupDescriptionContainer(popCardInfoCont);
+  createPopupCardDescription(description, popDescCont);
 };
 
 export default displayCommentpopup;

@@ -9,8 +9,19 @@
   top: 0;
   width: 100vw;
   min-height: 100vh;
+  height: 100%;
   overflow: auto;
-  background-color: #c1c7d0;
+  background-image: url('https://wallpapercave.com/wp/wp2311074.png');
+}
+
+.pop-up-container {
+  height: 100%;
+  border-radius: 20px;
+  flex-basis: 800px;
+  background-color: #733526;
+  border-color: #b5895a !important;
+  overflow-y: auto;
+  min-height: calc(100vh - 2rem);
 }
 
 .y-card {
@@ -22,11 +33,7 @@
 .cross-pop {
   height: 3rem;
   border-radius: 50%;
-}
-
-.pop-up-container {
-  display: flex;
-  flex-direction: column;
+  filter: invert(100%);
 }
 
 .hide {

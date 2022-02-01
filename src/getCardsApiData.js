@@ -22,21 +22,18 @@ const getCardsApiData = async (url) => {
       spells.push(card);
     }
   });
-  // console.log(spells);
 
   data.data.forEach((card) => {
     if (card.type === 'Normal Monster') {
       monsters.push(card);
     }
   });
-  // console.log(monsters);
 
   data.data.forEach((card) => {
     if (card.type === 'Trap Card') {
       traps.push(card);
     }
   });
-  // console.log(traps);
 };
 
 export {

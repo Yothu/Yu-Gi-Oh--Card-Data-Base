@@ -30,7 +30,7 @@ spellNav.addEventListener('click', () => {
 
 const loadPage = async () => {
   await getCardsApiData(baseUrl);
-  await displayList(monsters);
+  displayList(monsters);
 };
 
 loadPage();

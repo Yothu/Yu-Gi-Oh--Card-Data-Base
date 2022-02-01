@@ -1,7 +1,6 @@
 import loadImage from './load-image-module';
 
 const displayList = (array) => {
-  console.log('hello');
   const listContainer = document.getElementById('list-container');
   listContainer.innerHTML = '';
 
@@ -11,10 +10,10 @@ const displayList = (array) => {
 
     for (let i = 0; i < 3; i += 1) {
       const card = document.createElement('div');
-      card.classList.add('col-sm', 'card');
+      card.classList.add('col-sm', 'card', 'm-2');
       card.setAttribute('id', `card-${array[i + j].id}`);
       card.innerHTML = `
-    <div class="card-img-top"></div>
+    <div class="card-img-top w-75 align-self-center"></div>
     <div class="card-body d-flex flex-column align-items-center gap-1">
     <div class="card-title w-100 d-flex justify-content-between">  
     <h5>${array[i + j].name}</h5>
@@ -27,7 +26,7 @@ const displayList = (array) => {
     </div>
     `;
       const cardImageContainer = card.querySelector('.card-img-top');
-      const cardImage = loadImage(array[i + j].card_images[0].image_url_small,
+      const cardImage = loadImage(array[i + j].card_images[0].image_url,
         cardImageContainer, array[i + j].name);
       cardImage.classList.add('card-img-top');
 

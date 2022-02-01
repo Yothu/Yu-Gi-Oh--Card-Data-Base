@@ -1,3 +1,7 @@
 .header-logo {
   height: 5rem;
 }
+
+h5 {
+  max-width: 70%;
+}

@@ -1,20 +1,36 @@
 import './style.css';
 import './font-style.css';
 import loadImage from './load-image-module.js';
+import { getCardsApiData, monsters, spells, traps } from './getCardsApiData';
+import displayList from './displayList';
 
+const baseUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php';
 
 import logo from './components/images/monster-cards-logo.png';
 const headerImageContainer = document.querySelector('.header-logo-container');
-import cat from './components/images/cat1.jpg';
-const cardImageContainer = document.querySelector('.card-img-top');
-
-import getCardsApiData from './getCardsApiData';
-const baseUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php';
-
 const headerLogo = loadImage(logo, headerImageContainer, 'logo');
 headerLogo.classList.add('header-logo');
 
-const cardImage = loadImage(cat, cardImageContainer, 'fat-cat');
-cardImage.classList.add('card-img-top');
 
-getCardsApiData(baseUrl);
+const monsterNav = document.getElementById('monster-nav');
+monsterNav.addEventListener('click', () => {
+    displayList(monsters);
+});
+
+const trapNav = document.getElementById('trap-nav');
+trapNav.addEventListener('click', () => {
+    displayList(traps);
+});
+
+const spellNav = document.getElementById('spell-nav');
+spellNav.addEventListener('click', () => {
+    displayList(spells);
+});
+
+
+const loadPage = async () => {
+  await getCardsApiData(baseUrl);
+  await displayList(monsters);
+}
+
+loadPage();

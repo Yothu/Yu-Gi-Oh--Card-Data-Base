@@ -1,3 +1,7 @@
+const traps = [];
+const monsters = [];
+const spells = [];
+
 const getCardsApiData = async (url) => {
   const response = await fetch(url);
   console.log('response:', await response);
@@ -13,30 +17,27 @@ const getCardsApiData = async (url) => {
   console.log('race:', data.data[0].race);
   console.log('Image:', data.data[0].card_images[0].image_url);
 
-  const spells = [];
   data.data.forEach(card => {
     if (card.type === 'Spell Card') {
       spells.push(card);
     }
   });
-  console.log(spells);
+  // console.log(spells);
 
-  const monsters = [];
   data.data.forEach(card => {
     if (card.type === 'Normal Monster') {
       monsters.push(card);
     }
   });
-  console.log(monsters);
+  // console.log(monsters);
 
-  const traps = [];
   data.data.forEach(card => {
     if (card.type === 'Trap Card') {
       traps.push(card);
     }
   });
-  console.log(traps);
-
+  // console.log(traps);
 }
 
-export default getCardsApiData;
+
+export { getCardsApiData, monsters, traps, spells };

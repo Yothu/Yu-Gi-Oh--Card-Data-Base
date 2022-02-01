@@ -1,3 +1,32 @@
 .header-logo {
   height: 5rem;
 }
+
+.pop-up-background {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: #c1c7d0;
+}
+
+.y-card {
+  min-width: 250px;
+  width: 50vw;
+}
+
+.cross-pop {
+  height: 3rem;
+}
+
+.pop-up-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hide {
+  display: none !important;
+}

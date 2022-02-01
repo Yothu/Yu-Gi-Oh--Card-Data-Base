@@ -135,7 +135,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _font_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./font-style.css */ \"./src/font-style.css\");\n/* harmony import */ var _load_image_module_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./load-image-module.js */ \"./src/load-image-module.js\");\n/* harmony import */ var _components_images_monster_cards_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/images/monster-cards-logo.png */ \"./src/components/images/monster-cards-logo.png\");\n\n\n\n\n\n\nconst headerImageContainer = document.querySelector('.header-logo-container');\n\n\nconst headerLogo = (0,_load_image_module_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(_components_images_monster_cards_logo_png__WEBPACK_IMPORTED_MODULE_3__, headerImageContainer, 'logo');\nheaderLogo.classList.add('header-logo');\n\n\n//# sourceURL=webpack://api-capstone-project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _font_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./font-style.css */ \"./src/font-style.css\");\n/* harmony import */ var _load_image_module_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./load-image-module.js */ \"./src/load-image-module.js\");\n/* harmony import */ var _components_images_monster_cards_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/images/monster-cards-logo.png */ \"./src/components/images/monster-cards-logo.png\");\n/* harmony import */ var _components_images_cat1_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/images/cat1.jpg */ \"./src/components/images/cat1.jpg\");\n\n\n\n\n\n\nconst headerImageContainer = document.querySelector('.header-logo-container');\n\n\nconst cardImageContainer = document.querySelector('.card-img-top');\n\nconst headerLogo = (0,_load_image_module_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(_components_images_monster_cards_logo_png__WEBPACK_IMPORTED_MODULE_3__, headerImageContainer, 'logo');\nheaderLogo.classList.add('header-logo');\n\nconst cardImage = (0,_load_image_module_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(_components_images_cat1_jpg__WEBPACK_IMPORTED_MODULE_4__, cardImageContainer, 'fat-cat');\ncardImage.classList.add('card-img-top');\n\n\n//# sourceURL=webpack://api-capstone-project/./src/index.js?");
 
 /***/ }),
 
@@ -146,6 +146,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst loadImage = (imageAddress, elementContainer, altText) => {\n  const myIcon = new Image();\n  myIcon.src = imageAddress;\n  myIcon.setAttribute('alt', altText);\n  elementContainer.appendChild(myIcon);\n\n  return myIcon;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadImage);\n\n\n//# sourceURL=webpack://api-capstone-project/./src/load-image-module.js?");
+
+/***/ }),
+
+/***/ "./src/components/images/cat1.jpg":
+/*!****************************************!*\
+  !*** ./src/components/images/cat1.jpg ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"c8ee2dca0894c62be94c.jpg\";\n\n//# sourceURL=webpack://api-capstone-project/./src/components/images/cat1.jpg?");
 
 /***/ }),
 

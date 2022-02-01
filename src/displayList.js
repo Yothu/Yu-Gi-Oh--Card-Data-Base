@@ -10,21 +10,22 @@ const displayList = (array) => {
 
     for (let i = 0; i < 3; i += 1) {
       const card = document.createElement('div');
-      card.classList.add('col-sm', 'card', 'm-2');
+      //Watch out for this
+      card.classList.add('col-sm-6', 'col-12', 'col-md-4', 'card', 'm-2', 'p-2');
       card.setAttribute('id', `card-${array[i + j].id}`);
       card.innerHTML = `
-    <div class="card-img-top w-75 align-self-center"></div>
-    <div class="card-body d-flex flex-column align-items-center gap-1">
-    <div class="card-title w-100 d-flex justify-content-between">  
-    <h5>${array[i + j].name}</h5>
-    <div class="card-text d-flex flex-column align-items-end">
-    <i class="far fa-heart"></i>
-    <p>Likes: 0</p>
-    </div>
-    </div>
-    <a href="#" class="btn btn-primary">Comments</a>
-    </div>
-    `;
+        <div class="card-img-top w-75 align-self-center"></div>
+        <div class="card-body d-flex flex-column align-items-center gap-1">
+        <div class="card-title w-100 d-flex justify-content-between">  
+        <h5>${array[i + j].name}</h5>
+        <div class="card-text d-flex flex-column align-items-end">
+        <i class="far fa-heart"></i>
+        <p>Likes: 0</p>
+        </div>
+        </div>
+        <a href="#" class="btn btn-primary">Comments</a>
+        </div>
+        `;
       const cardImageContainer = card.querySelector('.card-img-top');
       const cardImage = loadImage(array[i + j].card_images[0].image_url,
         cardImageContainer, array[i + j].name);

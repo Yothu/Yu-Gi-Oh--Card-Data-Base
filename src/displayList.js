@@ -32,7 +32,7 @@ const displayList = async (array) => {
               <p class="likes-counter">Likes: ${cardLikes}</p>
             </div>
           </div>
-          <a href="#" class="btn btn-primary">Comments</a>
+          <a href="#" class="item-comment-button btn btn-primary">Comments</a>
         </div>
         `;
       const cardImageContainer = card.querySelector('.card-img-top');
@@ -45,8 +45,9 @@ const displayList = async (array) => {
         const objCardId = {
           item_id: `${array[i + j].id}`,
         };
-      await addLike(objCardId);
-        
+        await addLike(objCardId);
+      });
+
       const itemCommentBtn = card.querySelector('.item-comment-button');
       itemCommentBtn.addEventListener('click', () => {
         const cardId = array[i + j].id;
@@ -57,7 +58,6 @@ const displayList = async (array) => {
         const cardImage = array[i + j].card_images[0].image_url;
 
         displayCommentpopup(cardId, cardName, cardType, cardDesc, cardRace, cardImage);
-
       });
 
       row.appendChild(card);

@@ -1,4 +1,8 @@
-const createComment = async (url, id, user, comment) => {
+const appCode = 'oY7NrmeQIcmEQ8n2GjZY';
+
+const createComment = async (id, user, comment) => {
+  const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appCode}/comments`;
+
   await fetch(url, {
     method: 'POST',
     headers: {

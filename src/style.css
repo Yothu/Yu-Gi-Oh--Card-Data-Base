@@ -67,3 +67,7 @@ hr {
   border-top: 4px solid black;
   margin: 1em 0;
 }
+
+.comment-message {
+  height: 10rem;
+}

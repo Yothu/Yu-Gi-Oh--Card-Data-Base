@@ -1,4 +1,8 @@
 import displayCommentsOnPopup from './displayCommentsOnPopup.js';
+import createComment from './createComment.js';
+import commentDataIsValid from './checkCommentData.js';
+import removeHTMLComments from './deleteComments.js';
+import popupCommentCounter from './commentCounter.js';
 
 const displayCommentpopup = (id, name, type, description, race, image) => {
   const popUpOuterContainer = document.createElement('div');
@@ -30,23 +34,50 @@ const displayCommentpopup = (id, name, type, description, race, image) => {
       </div>
       <hr>
       <div class="popup-comment-section d-flex flex-column align-items-start">
-        <h4 class="align-self-center text-white font-30px">Comments</h4>
+        <h4 class="comments-container-title align-self-center text-white font-30px">Comments</h4>
         <div class="popup-comments-container p-3 d-flex flex-column align-self-stretch"></div>
       </div>
       <hr>
-      <div class="popup-comments-form-container d-flex flex-column">
+      <div class="popup-comments-form-container d-flex flex-column p-3">
         <h4 class="align-self-center text-white font-30px">Add a comment!</h4>
-        <div class="popup-comments-form"></div>
+        <div class="popup-comments-form d-flex flex-column p-3">
+          <input type="text" class="comment-user mb-3 w-50" name="contact-user" placeholder="Username" maxlength="30" required>
+          <textarea class="comment-message mb-3" name="contact-message" placeholder="Your insights" maxlength="500" required></textarea>
+          <button type="button" class="add-comment-btn align-self-start">Post Comment</button> 
+        </div>
       </div>
     </div>
   `;
 
   const popComCnt = popUpOuterContainer.querySelector('.popup-comments-container');
-  displayCommentsOnPopup(id, popComCnt);
+
+  (async () => {
+    await displayCommentsOnPopup(id, popComCnt);
+    popupCommentCounter(popComCnt);
+  })();
 
   const popupCross = popUpOuterContainer.querySelector('.cross-pop');
   popupCross.addEventListener('click', () => {
     popUpOuterContainer.remove();
+  });
+
+  const addCommentBtn = popUpOuterContainer.querySelector('.add-comment-btn');
+  addCommentBtn.addEventListener('click', () => {
+    const commentUser = popUpOuterContainer.querySelector('.comment-user').value;
+    const commentMessage = popUpOuterContainer.querySelector('.comment-message').value;
+
+    (async () => {
+      if (commentDataIsValid(commentUser, commentMessage)) {
+        await createComment(id, commentUser, commentMessage);
+        removeHTMLComments();
+        await displayCommentsOnPopup(id, popComCnt);
+        popUpOuterContainer.querySelector('.comment-user').value = '';
+        popUpOuterContainer.querySelector('.comment-message').value = '';
+        popupCommentCounter(popComCnt);
+      } else {
+        console.log('Username or Comment is empty');
+      }
+    })();
   });
 
   const cardsContainer = document.getElementById('list-container');

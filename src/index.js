@@ -34,3 +34,19 @@ const loadPage = async () => {
 };
 
 loadPage();
+
+// const basicURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
+// let gameId = ''; YugiOh GameID: cOGEfAnTEwb10Y4bv0g7
+
+const addGame = async () => {
+  const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/`, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+  const data = await response.text();
+  console.log(data);
+}
+
+// addGame();

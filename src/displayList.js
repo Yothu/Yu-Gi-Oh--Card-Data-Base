@@ -1,4 +1,5 @@
-import loadImage from './load-image-module.js';
+import loadImage from './load-image-module';
+import { getLikes, addLike } from './cardLikes';
 
 const displayList = (array) => {
   const listContainer = document.getElementById('list-container');
@@ -29,6 +30,17 @@ const displayList = (array) => {
       const cardImage = loadImage(array[i + j].card_images[0].image_url,
         cardImageContainer, array[i + j].name);
       cardImage.classList.add('card-img-top');
+
+      const cardHeart = card.querySelector('i');
+      cardHeart.addEventListener('click', async () => {
+        const cardID = {
+          item_id: `${array[i + j].id}`,
+        };
+        console.log(cardID); //
+        console.log(cardID.item_id); //
+        await addLike(cardID);
+        getLikes();
+      })
 
       row.appendChild(card);
     }

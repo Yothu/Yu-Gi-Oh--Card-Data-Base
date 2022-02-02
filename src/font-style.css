@@ -1,23 +1,22 @@
 /* FONT-FAMILY  */
-
 @font-face {
   font-family: ITC-Stone-Serif-Small-Caps-Bold;
-  src: url('./components/fonts/ITC-Stone-Serif-Small-Caps-Bold.ttf');
+  src: local('./components/fonts/ITC-Stone-Serif-Small-Caps-Bold.ttf');
 }
 
 @font-face {
   font-family: ITC-Stone-Serif-It-Italic;
-  src: url('./components/fonts/itc-stone-serif-lt-italic.ttf');
+  src: local('./components/fonts/itc-stone-serif-lt-italic.ttf');
 }
 
 @font-face {
   font-family: Matrix-Regular-Small-Caps;
-  src: url('./components/fonts/MatrixRegularSmallCaps.ttf');
+  src: local('./components/fonts/MatrixRegularSmallCaps.ttf');
 }
 
 @font-face {
   font-family: Matrix-Book;
-  src: url('./components/fonts/Matrix-Book.ttf');
+  src: local('./components/fonts/Matrix-Book.ttf');
 }
 
 .font-itc-stone-serif-small-caps-bold {

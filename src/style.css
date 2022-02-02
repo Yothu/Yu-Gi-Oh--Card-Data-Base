@@ -41,10 +41,6 @@
   filter: invert(100%);
 }
 
-.hide {
-  display: none !important;
-}
-
 h5 {
   max-width: 70%;
   font-size: 1rem;
@@ -57,4 +53,11 @@ p {
 .footer {
   border-color: var(--light-brown) !important;
   background-color: var(--brown) !important;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 4px solid black;
+  margin: 1em 0;
 }

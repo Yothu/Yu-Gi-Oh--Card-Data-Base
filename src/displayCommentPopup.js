@@ -10,7 +10,7 @@ const displayCommentpopup = (id, name, type, description, race, image) => {
         <img class="cross-pop p-1 align-self-end" alt="cross-icon" src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/344/external-close-cross-symbol-for-discontinued-and-invalid-basic-bold-tal-revivo.png">
         <img class="y-card" alt="card-image" src="${image}">
       </div>
-      <hr class="border border-3 border-dark">
+      <hr>
       <div class="p-3">
         <div class="name-container d-flex align-items-center">
           <p class="text-white pe-3">Name:</p>
@@ -18,7 +18,7 @@ const displayCommentpopup = (id, name, type, description, race, image) => {
         </div>
         <div class="type-container d-flex align-items-center">
           <p class="text-white pe-3">Type:</p>
-          <p class="text-white font-itc-stone-serif-small-caps-bold font-35px">${type}</p>
+          <p class="text-white font-itc-stone-serif-small-caps-bold font-25px">${type}</p>
         </div>
         <div class="race-container d-flex align-items-center">
           <p class="text-white pe-3">Race:</p>
@@ -28,12 +28,14 @@ const displayCommentpopup = (id, name, type, description, race, image) => {
           <p class="text-white font-itc-stone-serif-it-italic font-20px">${description}</p>
         </div>
       </div>
+      <hr>
       <div class="popup-comment-section d-flex flex-column align-items-start">
-        <h4 class="align-self-center text-white">Comments</h4>
+        <h4 class="align-self-center text-white font-30px">Comments</h4>
         <div class="popup-comments-container p-3"></div>
       </div>
+      <hr>
       <div class="popup-comments-form-container d-flex flex-column align-items-start">
-        <h4 class="align-self-center text-white">Add a comment!</h4>
+        <h4 class="align-self-center text-white font-30px">Add a comment!</h4>
         <div class="popup-comments-form"></div>
       </div>
     </div>

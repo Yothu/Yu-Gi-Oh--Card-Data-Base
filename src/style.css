@@ -47,13 +47,23 @@
   border-radius: 50%;
 }
 
-h5 {
-  max-width: 70%;
+h3 {
+  width: 60%;
   font-size: 1rem;
+  margin: 0;
+}
+
+.card-title {
+  height: 8vh;
+  width: 100%;
+  margin: 10px;
 }
 
 p {
   font-size: 1rem;
+  text-align: end;
+  margin: 0;
+  margin-right: 0.3rem;
 }
 
 .footer {

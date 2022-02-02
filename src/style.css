@@ -1,3 +1,8 @@
+:root {
+  --brown: #733526;
+  --light-brown: #b5895a;
+}
+
 .header-logo {
   height: 5rem;
 }
@@ -18,8 +23,8 @@
   height: 100%;
   border-radius: 20px;
   flex-basis: 800px;
-  background-color: #733526;
-  border-color: #b5895a !important;
+  background-color: var(--brown);
+  border-color: var(--light-brown) !important;
   overflow-y: auto;
   min-height: calc(100vh - 2rem);
 }
@@ -47,4 +52,9 @@ h5 {
 
 p {
   font-size: 1rem;
+}
+
+.footer {
+  border-color: var(--light-brown) !important;
+  background-color: var(--brown) !important;
 }

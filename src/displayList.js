@@ -4,16 +4,24 @@ import { getLikes, addLike } from './cardLikes';
 const displayList = async (array) => {
   const listContainer = document.getElementById('list-container');
   listContainer.innerHTML = '';
+  const likesPerCard = await getLikes();
+  console.log(likesPerCard);
 
   for (let j = 0; j < 15; j += 4) {
     const row = document.createElement('div');
     row.classList.add('row');
 
     for (let i = 0; i < 4; i += 1) {
+      let cardLikes = 0;
+      likesPerCard.forEach((obj) => {
+        if ((array[i + j].id).toString() === obj.item_id) {
+          cardLikes = obj.likes;
+        }
+      });
+
       const card = document.createElement('div');
       card.classList.add('col-12', 'col-sm-6', 'col-lg-3', 'card', 'pt-2');
       card.setAttribute('id', `card-${array[i + j].id}`);
-      const updatedLikes = await getLikes(array[i + j].id);
       card.innerHTML = `
         <div class="card-img-top w-75 align-self-center"></div>
         <div class="card-body d-flex flex-column align-items-center gap-1">
@@ -21,7 +29,7 @@ const displayList = async (array) => {
             <h3>${array[i + j].name}</h3>
             <div class="card-text d-flex flex-column align-items-end w-40">
               <i class="far fa-heart"></i>
-              <p class="likes-counter">Likes: ${updatedLikes}</p>
+              <p class="likes-counter">Likes: ${cardLikes}</p>
             </div>
           </div>
           <a href="#" class="btn btn-primary">Comments</a>
@@ -38,8 +46,7 @@ const displayList = async (array) => {
           item_id: `${array[i + j].id}`,
         };
         await addLike(objCardId);
-        getLikes();
-      })
+      });
 
       row.appendChild(card);
     }

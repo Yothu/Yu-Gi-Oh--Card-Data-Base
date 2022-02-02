@@ -25,11 +25,11 @@ const displayList = async (array) => {
       card.innerHTML = `
         <div class="card-img-top w-75 align-self-center"></div>
         <div class="card-body d-flex flex-column align-items-center gap-1">
-          <div class="card-title w-100 d-flex justify-content-between">  
+          <div class="card-title w-100 d-flex justify-content-between align-items-center">  
             <h3>${array[i + j].name}</h3>
-            <div class="card-text d-flex flex-column align-items-end w-40">
+            <div class="card-text d-flex align-items-center w-40">
+              <p class="likes-counter">${cardLikes}</p>
               <i class="far fa-heart"></i>
-              <p class="likes-counter">Likes: ${cardLikes}</p>
             </div>
           </div>
           <a href="#" class="item-comment-button btn btn-primary">Comments</a>

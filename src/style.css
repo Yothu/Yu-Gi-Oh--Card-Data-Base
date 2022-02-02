@@ -50,11 +50,18 @@
 h3 {
   width: 60%;
   font-size: 1rem;
+  margin: 0;
+}
+
+.card-title {
+  height: 5vh;
 }
 
 p {
   font-size: 1rem;
   text-align: end;
+  margin: 0;
+  margin-right: 0.3rem;
 }
 
 .footer {

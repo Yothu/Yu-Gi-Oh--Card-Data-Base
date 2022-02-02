@@ -32,7 +32,7 @@ const displayList = async (array) => {
               <i class="far fa-heart"></i>
             </div>
           </div>
-          <a href="#" class="item-comment-button btn btn-primary">Comments</a>
+          <a href="#card-${array[i + j].id}" class="item-comment-button btn btn-primary">Comments</a>
         </div>
         `;
       const cardImageContainer = card.querySelector('.card-img-top');

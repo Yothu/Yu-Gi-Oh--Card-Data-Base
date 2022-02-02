@@ -1,7 +1,7 @@
 import loadImage from './load-image-module';
 import { getLikes, addLike } from './cardLikes';
 
-const displayList = (array) => {
+const displayList = async (array) => {
   const listContainer = document.getElementById('list-container');
   listContainer.innerHTML = '';
 
@@ -13,17 +13,18 @@ const displayList = (array) => {
       const card = document.createElement('div');
       card.classList.add('col-12', 'col-sm-6', 'col-lg-3', 'card', 'pt-2');
       card.setAttribute('id', `card-${array[i + j].id}`);
+      const updatedLikes = await getLikes(array[i + j].id);
       card.innerHTML = `
         <div class="card-img-top w-75 align-self-center"></div>
         <div class="card-body d-flex flex-column align-items-center gap-1">
-        <div class="card-title w-100 d-flex justify-content-between">  
-        <h3>${array[i + j].name}</h3>
-        <div class="card-text d-flex flex-column align-items-end w-40">
-        <i class="far fa-heart"></i>
-        <p>Likes: 0</p>
-        </div>
-        </div>
-        <a href="#" class="btn btn-primary">Comments</a>
+          <div class="card-title w-100 d-flex justify-content-between">  
+            <h3>${array[i + j].name}</h3>
+            <div class="card-text d-flex flex-column align-items-end w-40">
+              <i class="far fa-heart"></i>
+              <p class="likes-counter">Likes: ${updatedLikes}</p>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">Comments</a>
         </div>
         `;
       const cardImageContainer = card.querySelector('.card-img-top');
@@ -33,12 +34,10 @@ const displayList = (array) => {
 
       const cardHeart = card.querySelector('i');
       cardHeart.addEventListener('click', async () => {
-        const cardID = {
+        const objCardId = {
           item_id: `${array[i + j].id}`,
         };
-        console.log(cardID); //
-        console.log(cardID.item_id); //
-        await addLike(cardID);
+        await addLike(objCardId);
         getLikes();
       })
 

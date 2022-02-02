@@ -1,4 +1,6 @@
-const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cOGEfAnTEwb10Y4bv0g7/likes/';
+const apiCode = 'cOGEfAnTEwb10Y4bv0g7';
+const URL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${apiCode}/likes/`;
+
 let likesPerCard = [];
 
 const getLikes = async () => {

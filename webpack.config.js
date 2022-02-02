@@ -16,6 +16,18 @@ module.exports = {
       import: './src/displayCommentPopup.js',
       dependOn: 'shared',
     },
+    getComments: {
+      import: './src/getComments.js',
+      dependOn: 'shared',
+    },
+    getCardList: {
+      import: './src/getCardsApiData.js',
+      dependOn: 'shared',
+    },
+    displayList: {
+      import: './src/displayList.js',
+      dependOn: 'shared',
+    },
     shared: 'lodash',
   },
   devServer: {

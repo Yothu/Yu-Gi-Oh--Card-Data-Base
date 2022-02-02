@@ -1,3 +1,4 @@
+import displayCommentpopup from './displayCommentPopup.js';
 import loadImage from './load-image-module.js';
 
 const displayList = (array) => {
@@ -22,13 +23,25 @@ const displayList = (array) => {
         <p>Likes: 0</p>
         </div>
         </div>
-        <a href="#" class="btn btn-primary">Comments</a>
+        <a href="#" class="item-comment-button btn btn-primary">Comments</a>
         </div>
         `;
       const cardImageContainer = card.querySelector('.card-img-top');
       const cardImage = loadImage(array[i + j].card_images[0].image_url,
         cardImageContainer, array[i + j].name);
       cardImage.classList.add('card-img-top');
+
+      const itemCommentBtn = card.querySelector('.item-comment-button');
+      itemCommentBtn.addEventListener('click', () => {
+        const cardId = array[i + j].id;
+        const cardName = array[i + j].name;
+        const cardType = array[i + j].type;
+        const cardDesc = array[i + j].desc;
+        const cardRace = array[i + j].race;
+        const cardImage = array[i + j].card_images[0].image_url;
+
+        displayCommentpopup(cardId, cardName, cardType, cardDesc, cardRace, cardImage);
+      });
 
       row.appendChild(card);
     }

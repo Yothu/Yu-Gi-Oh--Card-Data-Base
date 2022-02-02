@@ -33,13 +33,14 @@ const displayList = (array) => {
 
       const itemCommentBtn = card.querySelector('.item-comment-button');
       itemCommentBtn.addEventListener('click', () => {
+        const cardId = array[i + j].id;
         const cardName = array[i + j].name;
         const cardType = array[i + j].type;
         const cardDesc = array[i + j].desc;
         const cardRace = array[i + j].race;
         const cardImage = array[i + j].card_images[0].image_url;
 
-        displayCommentpopup(cardName, cardType, cardDesc, cardRace, cardImage);
+        displayCommentpopup(cardId, cardName, cardType, cardDesc, cardRace, cardImage);
       });
 
       row.appendChild(card);

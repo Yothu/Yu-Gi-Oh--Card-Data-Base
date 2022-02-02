@@ -1,4 +1,6 @@
-const displayCommentpopup = (name, type, description, race, image) => {
+import displayCommentsOnPopup from './displayCommentsOnPopup.js';
+
+const displayCommentpopup = (id, name, type, description, race, image) => {
   const popUpOuterContainer = document.createElement('div');
   popUpOuterContainer.classList.add('pop-up-background', 'd-flex', 'justify-content-center');
 
@@ -26,8 +28,12 @@ const displayCommentpopup = (name, type, description, race, image) => {
           <p class="text-white font-itc-stone-serif-it-italic font-20px">${description}</p>
         </div>
       </div>
+      <div class="popup-comments-container"></div>
     </div>
   `;
+
+  const popComCnt = popUpOuterContainer.querySelector('.popup-comments-container');
+  displayCommentsOnPopup(id, popComCnt);
 
   const popupCross = popUpOuterContainer.querySelector('.cross-pop');
   popupCross.addEventListener('click', () => {

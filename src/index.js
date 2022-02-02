@@ -1,6 +1,7 @@
 import './style.css';
 import './font-style.css';
 import loadImage from './load-image-module.js';
+import createApp from './getComments.js';
 import {
   getCardsApiData, monsters, spells, traps,
 } from './getCardsApiData.js';
@@ -28,9 +29,6 @@ const spellNav = document.getElementById('spell-nav');
 spellNav.addEventListener('click', () => {
   displayList(spells);
 });
-
-
-displayCommentpopup('Name', 'Type', 'Description', 'Race', './components/images/cat1.jpg');
 
 const loadPage = async () => {
   await getCardsApiData(baseUrl);

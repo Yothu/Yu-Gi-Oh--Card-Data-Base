@@ -1,3 +1,8 @@
+:root {
+  --brown: #733526;
+  --light-brown: #b5895a;
+}
+
 .header-logo {
   height: 5rem;
 }
@@ -18,8 +23,8 @@
   height: 100%;
   border-radius: 20px;
   flex-basis: 800px;
-  background-color: #733526;
-  border-color: #b5895a !important;
+  background-color: var(--brown);
+  border-color: var(--light-brown) !important;
   overflow-y: auto;
   min-height: calc(100vh - 2rem);
 }
@@ -34,10 +39,12 @@
   height: 3rem;
   border-radius: 50%;
   filter: invert(100%);
+  cursor: pointer;
 }
 
-.hide {
-  display: none !important;
+.cross-pop:hover {
+  border: 2px solid black;
+  border-radius: 50%;
 }
 
 h3 {
@@ -48,4 +55,16 @@ h3 {
 p {
   font-size: 1rem;
   text-align: end;
+}
+
+.footer {
+  border-color: var(--light-brown) !important;
+  background-color: var(--brown) !important;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 4px solid black;
+  margin: 1em 0;
 }

@@ -1,3 +1,4 @@
+import displayCommentpopup from './displayCommentPopup.js';
 import loadImage from './load-image-module.js';
 import { getLikes, addLike } from './cardLikes.js';
 
@@ -44,7 +45,19 @@ const displayList = async (array) => {
         const objCardId = {
           item_id: `${array[i + j].id}`,
         };
-        await addLike(objCardId);
+      await addLike(objCardId);
+        
+      const itemCommentBtn = card.querySelector('.item-comment-button');
+      itemCommentBtn.addEventListener('click', () => {
+        const cardId = array[i + j].id;
+        const cardName = array[i + j].name;
+        const cardType = array[i + j].type;
+        const cardDesc = array[i + j].desc;
+        const cardRace = array[i + j].race;
+        const cardImage = array[i + j].card_images[0].image_url;
+
+        displayCommentpopup(cardId, cardName, cardType, cardDesc, cardRace, cardImage);
+
       });
 
       row.appendChild(card);

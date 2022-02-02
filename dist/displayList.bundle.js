@@ -7,7 +7,7 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-(self["webpackChunkapi_capstone_project"] = self["webpackChunkapi_capstone_project"] || []).push([["displayComment"],{
+(self["webpackChunkapi_capstone_project"] = self["webpackChunkapi_capstone_project"] || []).push([["displayList"],{
 
 /***/ "./src/displayCommentPopup.js":
 /*!************************************!*\
@@ -29,6 +29,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/displayList.js":
+/*!****************************!*\
+  !*** ./src/displayList.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _displayCommentPopup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./displayCommentPopup.js */ \"./src/displayCommentPopup.js\");\n/* harmony import */ var _load_image_module_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./load-image-module.js */ \"./src/load-image-module.js\");\n\n\n\nconst displayList = (array) => {\n  const listContainer = document.getElementById('list-container');\n  listContainer.innerHTML = '';\n\n  for (let j = 0; j < 15; j += 4) {\n    const row = document.createElement('div');\n    row.classList.add('row');\n\n    for (let i = 0; i < 4; i += 1) {\n      const card = document.createElement('div');\n      card.classList.add('col-12', 'col-sm-6', 'col-lg-3', 'card', 'pt-2');\n      card.setAttribute('id', `card-${array[i + j].id}`);\n      card.innerHTML = `\n        <div class=\"card-img-top w-75 align-self-center\"></div>\n        <div class=\"card-body d-flex flex-column align-items-center gap-1\">\n        <div class=\"card-title w-100 d-flex justify-content-between\">  \n        <h5>${array[i + j].name}</h5>\n        <div class=\"card-text d-flex flex-column align-items-end\">\n        <i class=\"far fa-heart\"></i>\n        <p>Likes: 0</p>\n        </div>\n        </div>\n        <a href=\"#\" class=\"item-comment-button btn btn-primary\">Comments</a>\n        </div>\n        `;\n      const cardImageContainer = card.querySelector('.card-img-top');\n      const cardImage = (0,_load_image_module_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(array[i + j].card_images[0].image_url,\n        cardImageContainer, array[i + j].name);\n      cardImage.classList.add('card-img-top');\n\n      const itemCommentBtn = card.querySelector('.item-comment-button');\n      itemCommentBtn.addEventListener('click', () => {\n        const cardId = array[i + j].id;\n        const cardName = array[i + j].name;\n        const cardType = array[i + j].type;\n        const cardDesc = array[i + j].desc;\n        const cardRace = array[i + j].race;\n        const cardImage = array[i + j].card_images[0].image_url;\n\n        (0,_displayCommentPopup_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(cardId, cardName, cardType, cardDesc, cardRace, cardImage);\n      });\n\n      row.appendChild(card);\n    }\n\n    listContainer.appendChild(row);\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayList);\n\n//# sourceURL=webpack://api-capstone-project/./src/displayList.js?");
+
+/***/ }),
+
 /***/ "./src/getComments.js":
 /*!****************************!*\
   !*** ./src/getComments.js ***!
@@ -37,12 +47,22 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst appCode = 'oY7NrmeQIcmEQ8n2GjZY';\n\nconst getComments = async (id) => {\n  try {\n    const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appCode}/comments?item_id=${id}`;\n    const response = await fetch(url);\n    if (response.ok) {\n      return response.json();\n    }\n    return false;\n  } catch (error) {\n    return false;\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getComments);\n\n\n//# sourceURL=webpack://api-capstone-project/./src/getComments.js?");
 
+/***/ }),
+
+/***/ "./src/load-image-module.js":
+/*!**********************************!*\
+  !*** ./src/load-image-module.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst loadImage = (imageAddress, elementContainer, altText) => {\n  const myIcon = new Image();\n  myIcon.src = imageAddress;\n  myIcon.setAttribute('alt', altText);\n  elementContainer.appendChild(myIcon);\n\n  return myIcon;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadImage);\n\n\n//# sourceURL=webpack://api-capstone-project/./src/load-image-module.js?");
+
 /***/ })
 
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["shared"], () => (__webpack_exec__("./src/displayCommentPopup.js")));
+/******/ __webpack_require__.O(0, ["shared"], () => (__webpack_exec__("./src/displayList.js")));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);

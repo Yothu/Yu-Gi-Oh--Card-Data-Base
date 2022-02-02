@@ -59,7 +59,7 @@ h3 {
   margin: 10px;
 }
 
-p {
+.likes-counter {
   font-size: 1rem;
   text-align: end;
   margin: 0;

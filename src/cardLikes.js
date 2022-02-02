@@ -17,21 +17,18 @@ const getLikes = async () => {
 };
 
 const addLike = async (objCardId) => {
-  const response = await fetch(`${URL}`, {
+  await fetch(`${URL}`, {
     method: 'POST',
     body: JSON.stringify(objCardId),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-  const msg = response.status;
-  console.log(msg);
   await getLikes();
 
   let cardLikes = 0;
   likesPerCard.forEach((obj) => {
     if ((objCardId.item_id) === obj.item_id) {
-      console.log('I DID IT');
       cardLikes = obj.likes;
     }
   });
@@ -41,7 +38,6 @@ const addLike = async (objCardId) => {
   cardToUpdate.querySelector('.likes-counter').textContent = `
   Likes: ${cardLikes}
   `;
-  console.log(cardToUpdate);
 };
 
 export {

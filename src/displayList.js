@@ -1,11 +1,10 @@
-import loadImage from './load-image-module';
-import { getLikes, addLike } from './cardLikes';
+import loadImage from './load-image-module.js';
+import { getLikes, addLike } from './cardLikes.js';
 
 const displayList = async (array) => {
   const listContainer = document.getElementById('list-container');
   listContainer.innerHTML = '';
   const likesPerCard = await getLikes();
-  console.log(likesPerCard);
 
   for (let j = 0; j < 15; j += 4) {
     const row = document.createElement('div');

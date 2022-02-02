@@ -31,10 +31,10 @@ const displayCommentpopup = (id, name, type, description, race, image) => {
       <hr>
       <div class="popup-comment-section d-flex flex-column align-items-start">
         <h4 class="align-self-center text-white font-30px">Comments</h4>
-        <div class="popup-comments-container p-3"></div>
+        <div class="popup-comments-container p-3 d-flex flex-column align-self-stretch"></div>
       </div>
       <hr>
-      <div class="popup-comments-form-container d-flex flex-column align-items-start">
+      <div class="popup-comments-form-container d-flex flex-column">
         <h4 class="align-self-center text-white font-30px">Add a comment!</h4>
         <div class="popup-comments-form"></div>
       </div>

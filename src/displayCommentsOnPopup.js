@@ -2,15 +2,15 @@ import getComments from './getComments.js';
 
 const createDisplayComment = ({ username, comment }, date) => {
   const commentElement = document.createElement('div');
-  commentElement.classList.add('d-flex', 'p-2', 'text-white', 'flex-column');
+  commentElement.classList.add('d-flex', 'p-2', 'text-white', 'flex-column', 'flex-md-row');
 
   const commentDate = document.createElement('p');
-  commentDate.classList.add('text-white', 'font-15px', 'm-0', 'px-1', 'order-1');
+  commentDate.classList.add('text-white', 'font-15px', 'm-0', 'px-1', 'order-1', 'order-sm-0');
   commentDate.innerHTML = `${date}`;
   commentElement.appendChild(commentDate);
 
   const commentName = document.createElement('p');
-  commentName.classList.add('text-white', 'font-20px', 'm-0', 'px-1', 'order-0', 'font-itc-stone-serif-small-caps-bold');
+  commentName.classList.add('text-white', 'font-20px', 'm-0', 'px-1', 'order-0', 'order-sm-1', 'font-itc-stone-serif-small-caps-bold');
   commentName.innerHTML = `${username}`;
   commentElement.appendChild(commentName);
 
@@ -30,6 +30,11 @@ const displayCommentsOnPopup = async (id, commentsContainer) => {
       const commentElement = createDisplayComment(commentArray[i], commentArray[i].creation_date);
       commentsContainer.appendChild(commentElement);
     }
+  } else {
+    const commentElement = document.createElement('span');
+    commentElement.textContent = 'No comments on this card!.';
+    commentElement.classList.add('text-white', 'font-18px', 'm-0', 'px-1', 'order-2', 'font-itc-stone-serif-it-italic', 'align-self-center');
+    commentsContainer.appendChild(commentElement);
   }
 };
 

@@ -39,6 +39,12 @@
   height: 3rem;
   border-radius: 50%;
   filter: invert(100%);
+  cursor: pointer;
+}
+
+.cross-pop:hover {
+  border: 2px solid black;
+  border-radius: 50%;
 }
 
 h5 {

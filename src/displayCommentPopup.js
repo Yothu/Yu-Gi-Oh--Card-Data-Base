@@ -29,6 +29,11 @@ const displayCommentpopup = (name, type, description, race, image) => {
     </div>
   `;
 
+  const popupCross = popUpOuterContainer.querySelector('.cross-pop');
+  popupCross.addEventListener('click', () => {
+    popUpOuterContainer.remove();
+  });
+
   const cardsContainer = document.getElementById('list-container');
   cardsContainer.appendChild(popUpOuterContainer);
 };

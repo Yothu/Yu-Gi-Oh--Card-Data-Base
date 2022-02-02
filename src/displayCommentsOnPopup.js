@@ -1,8 +1,10 @@
 import getComments from './getComments.js';
 
-const createDisplayComment = ({ user, comment }) => {
+// eslint-disable-next-line camelcase
+const createDisplayComment = ({ username, comment }, date) => {
   const commentElement = document.createElement('p');
-  commentElement.innerHTML = `${user}: ${comment}`;
+  commentElement.classList.add('text-white');
+  commentElement.innerHTML = `${date} ${username}: ${comment}`;
   return commentElement;
 };
 
@@ -11,7 +13,7 @@ const displayCommentsOnPopup = async (id, commentsContainer) => {
 
   if (commentArray) {
     for (let i = 0; i < commentArray.length; i += 1) {
-      const commentElement = createDisplayComment(commentArray[i]);
+      const commentElement = createDisplayComment(commentArray[i], commentArray[i].creation_date);
       commentsContainer.appendChild(commentElement);
     }
   }

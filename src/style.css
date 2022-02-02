@@ -40,11 +40,12 @@
   display: none !important;
 }
 
-h5 {
-  max-width: 70%;
+h3 {
+  width: 60%;
   font-size: 1rem;
 }
 
 p {
   font-size: 1rem;
+  text-align: end;
 }

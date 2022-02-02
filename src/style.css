@@ -54,7 +54,9 @@ h3 {
 }
 
 .card-title {
-  height: 5vh;
+  height: 8vh;
+  width: 100%;
+  margin: 10px;
 }
 
 p {

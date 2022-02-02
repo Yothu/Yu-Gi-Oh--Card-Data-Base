@@ -38,7 +38,7 @@ const addLike = async (objCardId) => {
   const cardID = objCardId.item_id;
   const cardToUpdate = document.getElementById(`card-${cardID}`);
   cardToUpdate.querySelector('.likes-counter').textContent = `
-  Likes: ${cardLikes}
+  ${cardLikes}
   `;
 };
 

@@ -23,9 +23,9 @@ const displayList = async (array) => {
       card.classList.add('col-12', 'col-sm-6', 'col-lg-3', 'card', 'pt-2');
       card.setAttribute('id', `card-${array[i + j].id}`);
       card.innerHTML = `
-        <div class="card-img-top w-75 align-self-center"></div>
-        <div class="card-body d-flex flex-column align-items-center gap-1">
-          <div class="card-title w-100 d-flex justify-content-between align-items-center">  
+        <div class="card-img-top w-80 align-self-center"></div>
+        <div class="card-body d-flex flex-column align-items-center gap-2">
+          <div class="card-title d-flex justify-content-between align-items-center">  
             <h3>${array[i + j].name}</h3>
             <div class="card-text d-flex align-items-center w-40">
               <p class="likes-counter">${cardLikes}</p>

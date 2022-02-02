@@ -1,38 +1,65 @@
 /* FONT-FAMILY  */
 @font-face {
-  font-family: ITC-Stone-Serif-Small-Caps-Bold;
-  src: local('./components/fonts/ITC-Stone-Serif-Small-Caps-Bold.ttf');
+  font-family: 'StoneSerif LT';
+  src:
+    local('ITC Stone Serif LT Italic'),
+    local('StoneSerifLT-Italic'),
+    url('components/fonts/hinted-subset-StoneSerifLT-Italic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
 }
 
 @font-face {
-  font-family: ITC-Stone-Serif-It-Italic;
-  src: local('./components/fonts/itc-stone-serif-lt-italic.ttf');
+  font-family: 'Matrix-Book';
+  src:
+    local('Matrix-Book'),
+    url('components/fonts/hinted-subset-Matrix-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: Matrix-Regular-Small-Caps;
-  src: local('./components/fonts/MatrixRegularSmallCaps.ttf');
+  font-family: 'MatrixRegularSmallCaps';
+  src:
+    local('MatrixRegularSmallCaps'),
+    url('components/fonts/hinted-subset-MatrixRegularSmallCaps.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: Matrix-Book;
-  src: local('./components/fonts/Matrix-Book.ttf');
+  font-family: 'Yu-Gi-Oh!ITCStoneSerifSmallCaps';
+  src:
+    local('Yu-Gi-Oh! ITC Stone Serif Bold Small Caps'),
+    local('Yu-Gi-Oh!ITCStoneSerifBoldSmallCaps'),
+    url('components/fonts/hinted-subset-Yu-Gi-OhITCStoneSerifBoldSmallCaps.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-.font-itc-stone-serif-small-caps-bold {
-  font-family: ITC-Stone-Serif-Small-Caps-Bold, sans-serif;
-}
-
+/* NEW FONTS */
 .font-itc-stone-serif-it-italic {
-  font-family: ITC-Stone-Serif-It-Italic, sans-serif;
-}
-
-.font-matrix-regular-small-caps {
-  font-family: Matrix-Regular-Small-Caps, sans-serif;
+  font-family: 'StoneSerif LT', sans-serif;
+  font-weight: 500;
+  font-style: italic;
 }
 
 .font-matrix-book {
-  font-family: Matrix-Book, sans-serif;
+  font-family: 'Matrix-Book', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-matrix-regular-small-caps {
+  font-family: 'MatrixRegularSmallCaps', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-itc-stone-serif-small-caps-bold {
+  font-family: 'Yu-Gi-Oh!ITCStoneSerifSmallCaps', sans-serif;
+  font-weight: bold;
+  font-style: normal;
 }
 
 /* FONT SIZE */

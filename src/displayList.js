@@ -25,15 +25,15 @@ const displayList = async (array) => {
       card.setAttribute('id', `card-${array[i + j].id}`);
       card.innerHTML = `
         <div class="card-img-top w-80 align-self-center"></div>
-        <div class="card-body d-flex flex-column align-items-center gap-2">
+        <div class="card-body d-flex flex-column align-items-center px-0 gap-2">
           <div class="card-title d-flex justify-content-between align-items-center">  
-            <h3 class="font-itc-stone-serif-small-caps-bold text-white">${array[i + j].name}</h3>
-            <div class="card-text d-flex align-items-center w-40">
-              <p class="likes-counter text-white">${cardLikes}</p>
-              <i class="far fa-heart"></i>
+            <h3 class="font-itc-stone-serif-small-caps-bold text-white font-25px m-0 font-sm-18px font-md-20px">${array[i + j].name}</h3>
+            <div class="card-text d-flex align-items-center">
+              <i class="far fa-heart pe-1 m-0"></i>
+              <p class="likes-counter text-white m-0">${cardLikes}</p>
             </div>
           </div>
-          <a href="#card-${array[i + j].id}" class="item-comment-button btn text-dark">Comments</a>
+          <a href="#card-${array[i + j].id}" class="item-comment-button fw-bolder btn mt-2 text-white">Comments</a>
         </div>
         `;
       const cardImageContainer = card.querySelector('.card-img-top');
@@ -69,7 +69,7 @@ const displayList = async (array) => {
 
   const countedCards = countCards();
   const cardsCounter = document.getElementById('cards-counter');
-  cardsCounter.textContent = `Cards shown: ${countedCards}`;
+  cardsCounter.textContent = `Cards (${countedCards})`;
 };
 
 export default displayList;

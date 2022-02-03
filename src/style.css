@@ -7,6 +7,11 @@
   height: 5rem;
 }
 
+.header-logo-container {
+  background-color: var(--light-brown);
+  border-radius: 10px;
+}
+
 .main-section {
   background-image: url("https://wallpapercave.com/wp/wp2311074.png");
 }
@@ -16,8 +21,25 @@
   background-color: var(--brown);
 }
 
+.header {
+  background-color: var(--brown);
+  border: 2px solid var(--light-brown);
+}
+
+.header-list {
+  background-color: var(--light-brown);
+}
+
+.header-item:hover {
+  filter: invert(100%);
+}
+
 .item-comment-button {
   background-color: var(--light-brown);
+}
+
+.item-comment-button:hover {
+  filter: invert(100%);
 }
 
 .pop-up-background {
@@ -40,6 +62,11 @@
   border-color: var(--light-brown) !important;
   overflow-y: auto;
   min-height: calc(100vh - 2rem);
+}
+
+.popup-comments-container {
+  border: 2px solid var(--light-brown);
+  border-radius: 10px;
 }
 
 .y-card {

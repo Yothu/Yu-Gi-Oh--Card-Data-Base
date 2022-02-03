@@ -1,7 +1,6 @@
 const countCards = () => {
-    const cardsShown = document.querySelectorAll('.card');
-    console.log(cardsShown);
-    return cardsShown.length;
-}
+  const cardsShown = document.querySelectorAll('.card');
+  return cardsShown.length;
+};
 
 export default countCards;

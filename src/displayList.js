@@ -26,13 +26,13 @@ const displayList = async (array) => {
         <div class="card-img-top w-80 align-self-center"></div>
         <div class="card-body d-flex flex-column align-items-center gap-2">
           <div class="card-title d-flex justify-content-between align-items-center">  
-            <h3>${array[i + j].name}</h3>
+            <h3 class="font-itc-stone-serif-small-caps-bold text-white">${array[i + j].name}</h3>
             <div class="card-text d-flex align-items-center w-40">
-              <p class="likes-counter">${cardLikes}</p>
+              <p class="likes-counter text-white">${cardLikes}</p>
               <i class="far fa-heart"></i>
             </div>
           </div>
-          <a href="#card-${array[i + j].id}" class="item-comment-button btn btn-primary">Comments</a>
+          <a href="#card-${array[i + j].id}" class="item-comment-button btn text-dark">Comments</a>
         </div>
         `;
       const cardImageContainer = card.querySelector('.card-img-top');

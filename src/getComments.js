@@ -1,4 +1,4 @@
-const appCode = 'oY7NrmeQIcmEQ8n2GjZY';
+import appCode from './apiCode.js';
 
 const getComments = async (id) => {
   try {

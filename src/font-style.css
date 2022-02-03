@@ -1,63 +1,63 @@
 /* FONT-FAMILY  */
 @font-face {
-  font-family: 'StoneSerif LT';
+  font-family: "StoneSerif LT";
   src:
-    local('ITC Stone Serif LT Italic'),
-    local('StoneSerifLT-Italic'),
-    url('components/fonts/hinted-subset-StoneSerifLT-Italic.ttf') format('truetype');
+    local("ITC Stone Serif LT Italic"),
+    local("StoneSerifLT-Italic"),
+    url("components/fonts/hinted-subset-StoneSerifLT-Italic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Matrix-Book';
+  font-family: Matrix-Book;
   src:
-    local('Matrix-Book'),
-    url('components/fonts/hinted-subset-Matrix-Book.ttf') format('truetype');
+    local("Matrix-Book"),
+    url("components/fonts/hinted-subset-Matrix-Book.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'MatrixRegularSmallCaps';
+  font-family: MatrixRegularSmallCaps;
   src:
-    local('MatrixRegularSmallCaps'),
-    url('components/fonts/hinted-subset-MatrixRegularSmallCaps.ttf') format('truetype');
+    local("MatrixRegularSmallCaps"),
+    url("components/fonts/hinted-subset-MatrixRegularSmallCaps.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Yu-Gi-Oh!ITCStoneSerifSmallCaps';
+  font-family: "Yu-Gi-Oh!ITCStoneSerifSmallCaps";
   src:
-    local('Yu-Gi-Oh! ITC Stone Serif Bold Small Caps'),
-    local('Yu-Gi-Oh!ITCStoneSerifBoldSmallCaps'),
-    url('components/fonts/hinted-subset-Yu-Gi-OhITCStoneSerifBoldSmallCaps.ttf') format('truetype');
+    local("Yu-Gi-Oh! ITC Stone Serif Bold Small Caps"),
+    local("Yu-Gi-Oh!ITCStoneSerifBoldSmallCaps"),
+    url("components/fonts/hinted-subset-Yu-Gi-OhITCStoneSerifBoldSmallCaps.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 /* NEW FONTS */
 .font-itc-stone-serif-it-italic {
-  font-family: 'StoneSerif LT', sans-serif;
+  font-family: "StoneSerif LT", sans-serif;
   font-weight: 500;
   font-style: italic;
 }
 
 .font-matrix-book {
-  font-family: 'Matrix-Book', sans-serif;
+  font-family: Matrix-Book, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
 
 .font-matrix-regular-small-caps {
-  font-family: 'MatrixRegularSmallCaps', sans-serif;
+  font-family: MatrixRegularSmallCaps, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
 
 .font-itc-stone-serif-small-caps-bold {
-  font-family: 'Yu-Gi-Oh!ITCStoneSerifSmallCaps', sans-serif;
+  font-family: "Yu-Gi-Oh!ITCStoneSerifSmallCaps", sans-serif;
   font-weight: bold;
   font-style: normal;
 }
@@ -303,252 +303,6 @@
   }
 
   .font-md-95px {
-    font-size: 95px !important;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .font-lg-12px {
-    font-size: 12px !important;
-  }
-
-  .font-lg-15px {
-    font-size: 15px !important;
-  }
-
-  .font-lg-18px {
-    font-size: 18px !important;
-  }
-
-  .font-lg-20px {
-    font-size: 20px !important;
-  }
-
-  .font-lg-22px {
-    font-size: 22px !important;
-  }
-
-  .font-lg-25px {
-    font-size: 25px !important;
-  }
-
-  .font-lg-30px {
-    font-size: 30px !important;
-  }
-
-  .font-lg-35px {
-    font-size: 35px !important;
-  }
-
-  .font-lg-40px {
-    font-size: 40px !important;
-  }
-
-  .font-lg-45px {
-    font-size: 45px !important;
-  }
-
-  .font-lg-50px {
-    font-size: 50px !important;
-  }
-
-  .font-lg-55px {
-    font-size: 55px !important;
-  }
-
-  .font-lg-60px {
-    font-size: 60px !important;
-  }
-
-  .font-lg-65px {
-    font-size: 65px !important;
-  }
-
-  .font-lg-70px {
-    font-size: 70px !important;
-  }
-
-  .font-lg-75px {
-    font-size: 75px !important;
-  }
-
-  .font-lg-80px {
-    font-size: 80px !important;
-  }
-
-  .font-lg-85px {
-    font-size: 85px !important;
-  }
-
-  .font-lg-90px {
-    font-size: 90px !important;
-  }
-
-  .font-lg-95px {
-    font-size: 95px !important;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .font-xl-12px {
-    font-size: 12px !important;
-  }
-
-  .font-xl-15px {
-    font-size: 15px !important;
-  }
-
-  .font-xl-18px {
-    font-size: 18px !important;
-  }
-
-  .font-xl-20px {
-    font-size: 20px !important;
-  }
-
-  .font-xl-22px {
-    font-size: 22px !important;
-  }
-
-  .font-xl-25px {
-    font-size: 25px !important;
-  }
-
-  .font-xl-30px {
-    font-size: 30px !important;
-  }
-
-  .font-xl-35px {
-    font-size: 35px !important;
-  }
-
-  .font-xl-40px {
-    font-size: 40px !important;
-  }
-
-  .font-xl-45px {
-    font-size: 45px !important;
-  }
-
-  .font-xl-50px {
-    font-size: 50px !important;
-  }
-
-  .font-xl-55px {
-    font-size: 55px !important;
-  }
-
-  .font-xl-60px {
-    font-size: 60px !important;
-  }
-
-  .font-xl-65px {
-    font-size: 65px !important;
-  }
-
-  .font-xl-70px {
-    font-size: 70px !important;
-  }
-
-  .font-xl-75px {
-    font-size: 75px !important;
-  }
-
-  .font-xl-80px {
-    font-size: 80px !important;
-  }
-
-  .font-xl-85px {
-    font-size: 85px !important;
-  }
-
-  .font-xl-90px {
-    font-size: 90px !important;
-  }
-
-  .font-xl-95px {
-    font-size: 95px !important;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .font-xxl-12px {
-    font-size: 12px !important;
-  }
-
-  .font-xxl-15px {
-    font-size: 15px !important;
-  }
-
-  .font-xxl-18px {
-    font-size: 18px !important;
-  }
-
-  .font-xxl-20px {
-    font-size: 20px !important;
-  }
-
-  .font-xxl-22px {
-    font-size: 22px !important;
-  }
-
-  .font-xxl-25px {
-    font-size: 25px !important;
-  }
-
-  .font-xxl-30px {
-    font-size: 30px !important;
-  }
-
-  .font-xxl-35px {
-    font-size: 35px !important;
-  }
-
-  .font-xxl-40px {
-    font-size: 40px !important;
-  }
-
-  .font-xxl-45px {
-    font-size: 45px !important;
-  }
-
-  .font-xxl-50px {
-    font-size: 50px !important;
-  }
-
-  .font-xxl-55px {
-    font-size: 55px !important;
-  }
-
-  .font-xxl-60px {
-    font-size: 60px !important;
-  }
-
-  .font-xxl-65px {
-    font-size: 65px !important;
-  }
-
-  .font-xxl-70px {
-    font-size: 70px !important;
-  }
-
-  .font-xxl-75px {
-    font-size: 75px !important;
-  }
-
-  .font-xxl-80px {
-    font-size: 80px !important;
-  }
-
-  .font-xxl-85px {
-    font-size: 85px !important;
-  }
-
-  .font-xxl-90px {
-    font-size: 90px !important;
-  }
-
-  .font-xxl-95px {
     font-size: 95px !important;
   }
 }

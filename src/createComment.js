@@ -1,4 +1,4 @@
-const appCode = 'oY7NrmeQIcmEQ8n2GjZY';
+import appCode from './apiCode.js';
 
 const createComment = async (id, user, comment) => {
   const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appCode}/comments`;

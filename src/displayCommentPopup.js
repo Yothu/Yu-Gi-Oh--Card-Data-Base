@@ -11,7 +11,7 @@ const displayCommentpopup = (id, name, type, description, race, image) => {
   popUpOuterContainer.innerHTML = `
     <div class="pop-up-container m-3 border border-3 text-align-center">
       <div class="popupImageContainer d-flex flex-column p-3 align-items-center">
-        <img class="cross-pop p-1 align-self-end" alt="cross-icon" src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/344/external-close-cross-symbol-for-discontinued-and-invalid-basic-bold-tal-revivo.png">
+        <a href="#" class="align-self-end"><img class="cross-pop p-1" alt="cross-icon" src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/344/external-close-cross-symbol-for-discontinued-and-invalid-basic-bold-tal-revivo.png"></a>
         <img class="y-card" alt="card-image" src="${image}">
       </div>
       <hr>

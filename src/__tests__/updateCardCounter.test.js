@@ -2,12 +2,12 @@
  * @jest-environment jsdom
  */
 
-import updateCardCounter from '../updateCardCounter.js'
+import updateCardCounter from '../updateCardCounter.js';
 
 describe('Test the counter of displayed cards on homepage', () => {
-    test(`Inside the #list-container, there are 4 .card elements, #cards-counter displays 'Cards shown : 4'`, () => {
-        //ARRANGE
-        document.body.innerHTML = `
+  test('Inside the #list-container, there are 4 .card elements, #cards-counter displays \'Cards shown : 4\'', () => {
+    // ARRANGE
+    document.body.innerHTML = `
         <p id="cards-counter"></p>
 
         <div class="main-section">
@@ -19,11 +19,11 @@ describe('Test the counter of displayed cards on homepage', () => {
           </div>
         </div>
         `;
-        //ACT
-        updateCardCounter();
-        const cardsCounter = document.getElementById('cards-counter');
-        const countedCards = cardsCounter.textContent;
-        //ASSERT
-        expect(countedCards).toBe('Cards shown: 4');
-    });
+    // ACT
+    updateCardCounter();
+    const cardsCounter = document.getElementById('cards-counter');
+    const countedCards = cardsCounter.textContent;
+    // ASSERT
+    expect(countedCards).toBe('Cards shown: 4');
+  });
 });

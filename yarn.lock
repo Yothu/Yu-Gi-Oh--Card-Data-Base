@@ -1840,7 +1840,7 @@
     "jest-util" "^27.4.2"
     "slash" "^3.0.0"
 
-"@jest/core@^27.0.3", "@jest/core@^27.4.7":
+"@jest/core@^27.4.7":
   "integrity" "sha512-n181PurSJkVMS+kClIFSX/LLvw9ExSb+4IMtD6YnfxZVerw9ANYtW0bPrm0MJu2pfe9SY9FJ9FtQ+MdZkrZwjg=="
   "resolved" "https://registry.npmjs.org/@jest/core/-/core-27.4.7.tgz"
   "version" "27.4.7"
@@ -5853,7 +5853,7 @@
     "stack-utils" "^2.0.3"
     "throat" "^6.0.1"
 
-"jest-cli@^27.0.3":
+"jest-cli@^27.4.7":
   "integrity" "sha512-zREYhvjjqe1KsGV15mdnxjThKNDgza1fhDT+iUsXWLCq3sxe9w5xnvyctcYVT5PcdLSjv7Y5dCwTS3FCF1tiuw=="
   "resolved" "https://registry.npmjs.org/jest-cli/-/jest-cli-27.4.7.tgz"
   "version" "27.4.7"
@@ -6214,14 +6214,14 @@
     "merge-stream" "^2.0.0"
     "supports-color" "^8.0.0"
 
-"jest@^27.0.3":
-  "integrity" "sha512-0G9+QqXFIZWgf5rs3yllpaA+13ZawVHfyuhuCV1EnoFbX++rVMRrYWCAnk+dfhwyv9/VTQvn+XG969u8aPRsBg=="
-  "resolved" "https://registry.npmjs.org/jest/-/jest-27.0.3.tgz"
-  "version" "27.0.3"
+"jest@^27.4.7":
+  "integrity" "sha512-8heYvsx7nV/m8m24Vk26Y87g73Ba6ueUd0MWed/NXMhSZIm62U/llVbS0PJe1SHunbyXjJ/BqG1z9bFjGUIvTg=="
+  "resolved" "https://registry.npmjs.org/jest/-/jest-27.4.7.tgz"
+  "version" "27.4.7"
   dependencies:
-    "@jest/core" "^27.0.3"
+    "@jest/core" "^27.4.7"
     "import-local" "^3.0.2"
-    "jest-cli" "^27.0.3"
+    "jest-cli" "^27.4.7"
 
 "js-library-detector@^6.4.0":
   "integrity" "sha512-NB2sYpmgqiTd7PNNhgp6bnEZmjvTUdAbzxABvYXWLpTL/t158T6mPnD8uYNd0FDP73YWyMrTYDvPxqdvCTbv2g=="

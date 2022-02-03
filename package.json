@@ -1,5 +1,5 @@
 {
-  "name": "api-capstone-project",
+  "name": "Yu-Gi-Oh--Card-Data-Base",
   "version": "1.0.0",
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "private": true,
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yothu/api-capstone-project.git"
+    "url": "git+https://github.com/Yothu/Yu-Gi-Oh--Card-Data-Base.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Yothu/api-capstone-project/issues"
+    "url": "https://github.com/Yothu/Yu-Gi-Oh--Card-Data-Base/issues"
   },
-  "homepage": "https://github.com/Yothu/api-capstone-project#readme",
+  "homepage": "https://github.com/Yothu/Yu-Gi-Oh--Card-Data-Base#readme",
   "devDependencies": {
     "@babel/core": "^7.16.12",
     "@babel/plugin-transform-modules-commonjs": "^7.16.8",

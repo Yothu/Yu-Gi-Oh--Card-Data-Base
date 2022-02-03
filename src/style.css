@@ -7,6 +7,19 @@
   height: 5rem;
 }
 
+.main-section {
+  background-image: url("https://wallpapercave.com/wp/wp2311074.png");
+}
+
+.card {
+  border: 2px solid var(--light-brown);
+  background-color: var(--brown);
+}
+
+.item-comment-button {
+  background-color: var(--light-brown);
+}
+
 .pop-up-background {
   position: fixed;
   z-index: 1;
@@ -16,7 +29,7 @@
   min-height: 100vh;
   height: 100%;
   overflow: auto;
-  background-image: url('https://wallpapercave.com/wp/wp2311074.png');
+  background-image: url("https://wallpapercave.com/wp/wp2311074.png");
 }
 
 .pop-up-container {
@@ -61,7 +74,6 @@ h3 {
 
 .likes-counter {
   font-size: 1rem;
-  text-align: end;
   margin: 0;
   margin-right: 0.3rem;
 }
@@ -71,9 +83,40 @@ h3 {
   background-color: var(--brown) !important;
 }
 
+.footer-text {
+  text-align: start !important;
+}
+
 hr {
   height: 1px;
   border: 0;
   border-top: 4px solid black;
   margin: 1em 0;
+}
+
+.comment-message {
+  height: 10rem;
+}
+
+.fa-heart {
+  cursor: pointer;
+  filter: invert(100%);
+}
+
+.far:hover {
+  filter: invert(50%);
+}
+
+.far:active {
+  filter: invert(0%);
+}
+
+.add-comment-btn {
+  background-color: var(--brown);
+  border: 2px solid var(--light-brown) !important;
+  color: white;
+}
+
+.add-comment-btn:hover {
+  box-shadow: 2px 2px 15px 2px gray;
 }

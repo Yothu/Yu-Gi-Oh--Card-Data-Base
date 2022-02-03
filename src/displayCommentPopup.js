@@ -26,14 +26,14 @@ const displayCommentpopup = (id, name, type, description, race, image) => {
         </div>
         <div class="race-container d-flex align-items-center">
           <p class="text-white pe-3">Race:</p>
-          <p class="text-white font-matrix-book font-20px">${race}</p>
+          <p class="text-white font-matrix-book font-25px">${race}</p>
         </div>
         <div class="description-container d-flex">
           <p class="text-white font-itc-stone-serif-it-italic font-20px">${description}</p>
         </div>
       </div>
       <hr>
-      <div class="popup-comment-section d-flex flex-column align-items-start">
+      <div class="popup-comment-section d-flex flex-column align-items-start px-3">
         <h4 class="comments-container-title align-self-center text-white font-30px">Comments</h4>
         <div class="popup-comments-container p-3 d-flex flex-column align-self-stretch"></div>
       </div>
@@ -74,8 +74,6 @@ const displayCommentpopup = (id, name, type, description, race, image) => {
         popUpOuterContainer.querySelector('.comment-user').value = '';
         popUpOuterContainer.querySelector('.comment-message').value = '';
         popupCommentCounter(popComCnt);
-      } else {
-        console.log('Username or Comment is empty');
       }
     })();
   });

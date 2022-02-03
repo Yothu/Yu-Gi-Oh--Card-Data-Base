@@ -1,5 +1,6 @@
 const countCards = () => {
-  const cardsShown = document.querySelectorAll('.card');
+  const listContainer = document.querySelector('#list-container');
+  const cardsShown = listContainer.querySelectorAll('.card');
   return cardsShown.length;
 };
 

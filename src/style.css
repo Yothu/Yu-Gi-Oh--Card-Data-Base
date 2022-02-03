@@ -1,0 +1,149 @@
+:root {
+  --brown: #733526;
+  --light-brown: #b5895a;
+}
+
+.header-logo {
+  height: 5rem;
+}
+
+.header-logo-container {
+  background-color: var(--light-brown);
+  border-radius: 10px;
+}
+
+.main-section {
+  background-image: url("https://wallpapercave.com/wp/wp2311074.png");
+}
+
+.card {
+  border: 2px solid var(--light-brown);
+  background-color: var(--brown);
+}
+
+.header {
+  background-color: var(--brown);
+  border: 2px solid var(--light-brown);
+}
+
+.header-list {
+  background-color: var(--light-brown);
+}
+
+.header-item:hover {
+  filter: invert(100%);
+}
+
+.item-comment-button {
+  background-color: var(--light-brown);
+}
+
+.item-comment-button:hover {
+  filter: invert(100%);
+}
+
+.pop-up-background {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  overflow: auto;
+  background-image: url("https://wallpapercave.com/wp/wp2311074.png");
+}
+
+.pop-up-container {
+  height: 100%;
+  border-radius: 20px;
+  flex-basis: 800px;
+  background-color: var(--brown);
+  border-color: var(--light-brown) !important;
+  overflow-y: auto;
+  min-height: calc(100vh - 2rem);
+}
+
+.popup-comments-container {
+  border: 2px solid var(--light-brown);
+  border-radius: 10px;
+}
+
+.y-card {
+  min-width: 250px;
+  width: 50vw;
+  max-width: 400px;
+}
+
+.cross-pop {
+  height: 3rem;
+  border-radius: 50%;
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+.cross-pop:hover {
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+h3 {
+  width: 60%;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.card-title {
+  height: 8vh;
+  width: 100%;
+  margin: 10px;
+}
+
+.likes-counter {
+  font-size: 1rem;
+  margin: 0;
+  margin-right: 0.3rem;
+}
+
+.footer {
+  border-color: var(--light-brown) !important;
+  background-color: var(--brown) !important;
+}
+
+.footer-text {
+  text-align: start !important;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 4px solid black;
+  margin: 1em 0;
+}
+
+.comment-message {
+  height: 10rem;
+}
+
+.fa-heart {
+  cursor: pointer;
+  filter: invert(100%);
+}
+
+.far:hover {
+  filter: invert(50%);
+}
+
+.far:active {
+  filter: invert(0%);
+}
+
+.add-comment-btn {
+  background-color: var(--brown);
+  border: 2px solid var(--light-brown) !important;
+  color: white;
+}
+
+.add-comment-btn:hover {
+  box-shadow: 2px 2px 15px 2px gray;
+}

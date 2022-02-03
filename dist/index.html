@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/1d827eb1c8.js" crossorigin="anonymous"></script>
+  <title>Monster Cards</title>
+<script defer src="index.bundle.js"></script><script defer src="loadImage.bundle.js"></script><script defer src="displayComment.bundle.js"></script><script defer src="getComments.bundle.js"></script><script defer src="getCardList.bundle.js"></script><script defer src="displayList.bundle.js"></script><script defer src="runtime.bundle.js"></script><script defer src="shared.bundle.js"></script></head>
+<body>
+  <div class="whole-page">
+    <header class="header p-3">
+      <nav id="header-inner-container" class="d-flex justify-content-between align-items-center container">
+        <div class="d-flex align-items-center">          
+          <div class="header-logo-container px-3"></div>
+          <p id="cards-counter" class="text-white font-15px font-sm-18px font-20-px px-3 m-0">Cards (??)</p>
+        </div>
+          <ul class="header-list list-unstyled d-flex m-0">
+            <li class="py-3" id="monster-nav"><a href="#" class="header-item text-decoration-none p-3 fw-bolder font-20px text-white">Monster Cards</a></li>
+            <li class="py-3" id="trap-nav"><a href="#" class="header-item text-decoration-none p-3 fw-bolder font-20px text-white">Trap Cards</a></li>
+            <li class="py-3" id="spell-nav"><a href="#" class="header-item text-decoration-none p-3 fw-bolder font-20px text-white">Spell Cards</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div class="main-section container-fluid">
+      <div id="list-container" class="container align-content-center p-3"></div>
+    </div>
+
+    <footer class="footer border border-2 border-dark">
+      <div class="footer-text-container p-3">
+        <p class="footer-text font-25px m-0 text-white font-matrix-book">Created by David Vergaray and Eduardo Sancho under MIT license.</p>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

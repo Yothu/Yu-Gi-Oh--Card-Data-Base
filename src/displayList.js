@@ -1,6 +1,7 @@
 import displayCommentpopup from './displayCommentPopup.js';
 import loadImage from './load-image-module.js';
 import { getLikes, addLike } from './cardLikes.js';
+import countCards from './countCards.js';
 
 const displayList = async (array) => {
   const listContainer = document.getElementById('list-container');
@@ -65,6 +66,10 @@ const displayList = async (array) => {
 
     listContainer.appendChild(row);
   }
+
+  const countedCards = countCards();
+  const cardsCounter = document.getElementById('cards-counter');
+  cardsCounter.textContent = `Cards shown: ${countedCards}`;
 };
 
 export default displayList;

@@ -72,11 +72,7 @@ h3 {
   margin: 10px;
 }
 
-.card-body {
-  padding-top: 0 !important;
-}
-
-p {
+.likes-counter {
   font-size: 1rem;
   margin: 0;
   margin-right: 0.3rem;

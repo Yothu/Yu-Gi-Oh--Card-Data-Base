@@ -175,7 +175,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst popupCommentCounter = (commentContainer) => {\n  const comContTitle = document.querySelector('.comments-container-title');\n  const comments = commentContainer.querySelectorAll('.comment-element');\n  comContTitle.innerHTML = `Comments (${comments.length})`;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (popupCommentCounter);\n\n\n//# sourceURL=webpack://api-capstone-project/./src/commentCounter.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst popupCommentCounter = (commentContainer) => {\n  const comContTitle = document.querySelector('.comments-container-title');\n  const comments = commentContainer.querySelectorAll(':scope > .comment-element');\n  comContTitle.innerHTML = `Comments (${comments.length})`;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (popupCommentCounter);\n\n\n//# sourceURL=webpack://api-capstone-project/./src/commentCounter.js?");
 
 /***/ }),
 

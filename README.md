@@ -10,7 +10,7 @@ You can also click on the comment button, and see what other's think of that car
 
 ## Live Demo
 
-Check out this project live, click [here](https://yothu.github.io/api-capstone-project/dist/index.html)
+Check out this project live, click [here](https://yothu.github.io/Yu-Gi-Oh--Card-Data-Base/dist/index.html)
 <hr>
 
 ## Built With
@@ -27,7 +27,7 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 Clone this repo into your local device by running the following command on your Terminal:
 ```
-git clone https://github.com/Yothu/api-capstone-project.git
+git clone https://github.com/Yothu/Yu-Gi-Oh--Card-Data-Base.git
 ```
 
 That will create a folder with the project inside it. Navigate into it to access the files.

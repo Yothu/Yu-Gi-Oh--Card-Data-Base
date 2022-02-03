@@ -11,6 +11,15 @@
   background-image: url("https://wallpapercave.com/wp/wp2311074.png");
 }
 
+.card {
+  border: 2px solid var(--light-brown);
+  background-color: var(--brown);
+}
+
+.item-comment-button {
+  background-color: var(--light-brown);
+}
+
 .pop-up-background {
   position: fixed;
   z-index: 1;
@@ -96,12 +105,23 @@ hr {
 
 .fa-heart {
   cursor: pointer;
-}
-
-.far:hover {
   filter: invert(100%);
 }
 
-.far:active {
+.far:hover {
   filter: invert(50%);
+}
+
+.far:active {
+  filter: invert(0%);
+}
+
+.add-comment-btn {
+  background-color: var(--brown);
+  border: 2px solid var(--light-brown) !important;
+  color: white;
+}
+
+.add-comment-btn:hover {
+  box-shadow: 2px 2px 15px 2px gray;
 }

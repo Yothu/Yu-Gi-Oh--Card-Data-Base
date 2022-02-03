@@ -17,7 +17,7 @@ Check out this project live, click [here](https://yothu.github.io/api-capstone-p
 
 - Major languages: JavaScript, HTML, CSS
 - Frameworks: Bootstrap 5
-- Technologies: used Webpack
+- Technologies used: Webpack
 <hr>
 
 ## Getting Started

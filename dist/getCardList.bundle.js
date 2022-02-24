@@ -7,7 +7,7 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-(self["webpackChunkapi_capstone_project"] = self["webpackChunkapi_capstone_project"] || []).push([["getCardList"],{
+(self["webpackChunkYu_Gi_Oh_Card_Data_Base"] = self["webpackChunkYu_Gi_Oh_Card_Data_Base"] || []).push([["getCardList"],{
 
 /***/ "./src/getCardsApiData.js":
 /*!********************************!*\
@@ -15,7 +15,7 @@
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getCardsApiData\": () => (/* binding */ getCardsApiData),\n/* harmony export */   \"monsters\": () => (/* binding */ monsters),\n/* harmony export */   \"traps\": () => (/* binding */ traps),\n/* harmony export */   \"spells\": () => (/* binding */ spells)\n/* harmony export */ });\nconst traps = [];\nconst monsters = [];\nconst spells = [];\n\nconst getCardsApiData = async (url) => {\n  const response = await fetch(url);\n  const data = await response.json();\n\n  data.data.forEach((card) => {\n    if (card.type === 'Spell Card') {\n      spells.push(card);\n    }\n  });\n\n  data.data.forEach((card) => {\n    if (card.type === 'Normal Monster') {\n      monsters.push(card);\n    }\n  });\n\n  data.data.forEach((card) => {\n    if (card.type === 'Trap Card') {\n      traps.push(card);\n    }\n  });\n};\n\n\n\n//# sourceURL=webpack://api-capstone-project/./src/getCardsApiData.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getCardsApiData\": () => (/* binding */ getCardsApiData),\n/* harmony export */   \"monsters\": () => (/* binding */ monsters),\n/* harmony export */   \"traps\": () => (/* binding */ traps),\n/* harmony export */   \"spells\": () => (/* binding */ spells)\n/* harmony export */ });\nconst traps = [];\nconst monsters = [];\nconst spells = [];\n\nconst getCardsApiData = async (url) => {\n  const response = await fetch(url);\n  const data = await response.json();\n\n  data.data.forEach((card) => {\n    if (card.type === 'Spell Card') {\n      spells.push(card);\n    }\n  });\n\n  data.data.forEach((card) => {\n    if (card.type === 'Normal Monster') {\n      monsters.push(card);\n    }\n  });\n\n  data.data.forEach((card) => {\n    if (card.type === 'Trap Card') {\n      traps.push(card);\n    }\n  });\n};\n\n\n\n//# sourceURL=webpack://Yu-Gi-Oh--Card-Data-Base/./src/getCardsApiData.js?");
 
 /***/ })
 
